@@ -12,10 +12,13 @@
   --text-1: var(--white-main);
   --text-2: var(--white);
   --background-1: var(--black-light);
-  --header-line-width: 8px;
+  --header-stroke-width: 8px;
+  --header-height: 48px;
+  --welcome-banner-height: 623px;
 }
 
-html {
+html,
+* {
   scroll-behavior: smooth;
   font-family: "Red Hat Display", sans-serif;
   font-size: 14px;
@@ -54,13 +57,15 @@ li {
 }
 
 header {
-  border-top-width: var(--header-line-width);
+  border-top-width: var(--header-stroke-width);
   border-top-style: solid;
   border-image: var(--gradient) 1;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 8px 24px;
+  box-sizing: border-box;
+  height: var(--header-height);
 }
 
 h1 {
@@ -78,6 +83,13 @@ h2 {
   font-weight: 400;
 }
 
+button {
+  color: var(--text-1);
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
 #logo {
   height: 24px;
 }
@@ -91,6 +103,7 @@ h2 {
   margin-left: 10%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 #block-welcome #banner {
@@ -101,7 +114,7 @@ h2 {
   object-position: top right;
   z-index: -1;
   position: absolute;
-  top: var(--header-line-width);
+  top: var(--header-stroke-width);
   right: 0;
 }
 
@@ -130,4 +143,38 @@ ul.gradient-items-list li span:first-of-type {
   font-size: 4.5rem;
   line-height: 6rem;
   font-weight: 900;
+}
+
+section#features-line {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-image: var(--gradient) 1;
+
+  margin: 72px 0;
+}
+
+ul#features-list {
+  padding: 14px;
+  margin: 0;
+  gap: 48px;
+
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+}
+
+ul#features-list li {
+  width: max-content;
+}
+
+.running-line-wrapper {
+  display: flex;
+  position: relative;
+}
+
+.running-line-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
