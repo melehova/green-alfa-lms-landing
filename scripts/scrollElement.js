@@ -1,10 +1,13 @@
-export const scrollElement = (selector, speed = 1) => {
+export const scrollElement = (selector, options = {}) => {
+  const { speed: initSpeed = 1, stopOnHover = false } = options;
+  let speed = initSpeed;
+
   const container = document.querySelector(`${selector} .running-line-wrapper`);
 
   const handleMarquee = () => {
     const contentNodes = [...container.querySelectorAll('.running-line-content')];
     const content = contentNodes.at(-1);
-    
+
     const contentWidth = content.offsetWidth;
     const pageWidth = document.documentElement.clientWidth;
     const contentCount = contentNodes.length;
@@ -32,6 +35,21 @@ export const scrollElement = (selector, speed = 1) => {
       window.requestAnimationFrame(loop);
     }
     loop();
+
+    if (stopOnHover) {
+      container.addEventListener('mouseover', () => {
+        speed = 0;
+      });
+
+      container.addEventListener('mouseout', () => {
+        speed = initSpeed;
+      });
+
+      container.addEventListener('scroll', () => {
+        console.log('scroll');
+        speed++;
+      });
+    }
   };
 
   handleMarquee();

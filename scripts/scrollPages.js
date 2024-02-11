@@ -1,3 +1,3 @@
 import { scrollElement } from "/scripts/scrollElement.js";
 
-scrollElement('#features-line', { speed: 0.7 });
+scrollElement('#pages', { speed: 0.5, stopOnHover: true });
