@@ -269,3 +269,28 @@ section#pages #pages-list {
 section#pages #pages-list img {
   height: 433px;
 }
+
+section#footer-slogan {
+  padding: 196px 90px 156px;
+  text-align: center;
+
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 2.57rem;
+  line-height: 4.57rem;
+  font-weight: 900;
+}
+
+section#footer-legal {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+section#footer-legal img {
+  width: 100px;
+}
