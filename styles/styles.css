@@ -165,9 +165,8 @@ section#features-line {
 }
 
 ul#features-list {
-  padding: 14px;
+  padding: 14px 0;
   margin: 0;
-  gap: 48px;
 
   font-size: 1.3rem;
   line-height: 1.7rem;
@@ -175,6 +174,7 @@ ul#features-list {
 
 ul#features-list li {
   width: max-content;
+  margin-right: 48px;
 }
 
 .running-line-wrapper {
@@ -263,7 +263,12 @@ section#pages {
 
 section#pages #pages-list {
   display: flex;
-  gap: 48px;
+  margin: 0;
+  padding: 0;
+}
+
+section#pages #pages-list li {
+  margin-right: 48px;
 }
 
 section#pages #pages-list img {
