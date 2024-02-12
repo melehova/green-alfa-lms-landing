@@ -15,9 +15,7 @@
   --background-1: var(--black-light);
   --background-2: var(--black-medium);
   --background-3: var(--grey-dark);
-  --header-stroke-width: 8px;
-  --header-height: 48px;
-  --welcome-banner-height: 623px;
+  --header-stroke-width: 0.4rem;
 }
 
 html {
@@ -41,12 +39,12 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 0.4rem;
   background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 4px;
+  border-radius: 0.4rem;
   background-color: var(--grey-medium);
 }
 
@@ -65,9 +63,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 8px 24px;
+  padding: 0.4rem 1.5rem;
   box-sizing: border-box;
-  height: var(--header-height);
 }
 
 h1 {
@@ -116,7 +113,6 @@ a {
 }
 
 #block-welcome #banner {
-  height: 623px;
   width: 100%;
   max-width: 30vw;
   object-fit: cover;
@@ -155,18 +151,28 @@ ul.gradient-items-list li span:first-of-type {
   font-weight: 900;
 }
 
+ul.gradient-items-list li span:first-of-type img {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+ul.gradient-items-list li span:first-of-type svg {
+  height: 100%;
+  width: 100%;
+}
+
 section#features-line {
-  border-top-width: 1px;
-  border-bottom-width: 1px;
+  border-top-width: 0.1rem;
+  border-bottom-width: 0.1rem;
   border-top-style: solid;
   border-bottom-style: solid;
   border-image: var(--gradient) 1;
 
-  margin: 72px 0;
+  margin: 3rem 0;
 }
 
 ul#features-list {
-  padding: 14px 0;
+  padding: 1rem 0;
   margin: 0;
 
   font-size: 1.3rem;
@@ -175,7 +181,7 @@ ul#features-list {
 
 ul#features-list li {
   width: max-content;
-  margin-right: 48px;
+  margin-right: 3rem;
 }
 
 .running-line-wrapper {
@@ -194,14 +200,14 @@ section#features-tiles {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   grid-auto-rows: minmax(auto, 1fr);
-  gap: 56px;
+  gap: 3rem;
   align-items: stretch;
   justify-content: space-around;
   align-content: space-evenly;
   
 
   background-color: var(--background-3);
-  padding: 95px 56px;
+  padding: 3.5rem 3rem;
   margin-right: 2%;
 }
 
@@ -209,11 +215,11 @@ section#features-tiles section.features-tile {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border-radius: 15px;
+  border-radius: 1rem;
 
   background-color: var(--background-2);
 
-  padding: 42px;
+  padding: 3rem;
 }
 
 section#features-tiles section#accent-tile {
@@ -247,7 +253,7 @@ section#features-tiles section#accent-tile #icons {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 12px 24px 12px 0;
+  padding: 1rem 1.5rem 1rem 0;
 }
 
 section#accent-tile #icons img {
@@ -264,10 +270,10 @@ section#accent-tile #definition {
 
 section#pages {
   background: var(--gradient);
-  padding: 72px 48px;
+  padding: 3.5rem 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 70vh;
 }
 
@@ -278,13 +284,13 @@ section#pages #pages-list {
 }
 
 section#pages #pages-list li {
-  margin-right: 48px;
+  margin-right: 3rem;
   transition: margin 0.3s ease-in-out;
 }
 
 section#pages #pages-list li:hover,
 section#pages #pages-list li:focus {
-  margin-top: -10px;
+  margin-top: -1rem;
 }
 
 section#pages #pages-list img {
@@ -292,7 +298,7 @@ section#pages #pages-list img {
 }
 
 section#footer-slogan {
-  padding: 196px 90px 156px;
+  padding: 8rem 3.5rem 6rem;
   text-align: center;
 
   background: var(--gradient);
@@ -309,11 +315,11 @@ section#footer-legal {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 10px;
+  gap: 1rem;
 }
 
 section#footer-legal img {
-  width: 100px;
+  width: 5rem;
 }
 
 @media screen and (min-width: 1280px) {
@@ -337,24 +343,24 @@ section#footer-legal img {
 
 @media screen and (min-width: 2560px) {
   html {
-    font-size: 22px;
+    font-size: 28px;
   }
 }
 
 @media screen and (min-width: 3840px) {
   html {
-    font-size: 26px;
+    font-size: 32px;
   }
 }
 
 @media screen and (min-width: 4096px) {
   html {
-    font-size: 28px;
+    font-size: 42px;
   }
 }
 
 @media screen and (min-width: 5120px) {
   html {
-    font-size: 32px;
+    font-size: 50px;
   }
 }
