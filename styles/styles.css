@@ -33,7 +33,7 @@ body {
   box-sizing: border-box;
   max-width: 100vw;
   height: max-content;
-  overflow-x: clip;
+  overflow-x: hidden;
   overflow-y: scroll;
   margin: 0;
   padding: 0;
@@ -104,6 +104,7 @@ a {
 }
 
 #block-welcome {
+  min-height: 80vh;
   display: flex;
 }
 
@@ -190,10 +191,15 @@ ul#features-list li {
 }
 
 section#features-tiles {
+  height: 80vh;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-  grid-auto-rows: minmax(auto, 1fr);
+  grid-auto-rows: max-content;
   gap: 56px;
+  align-items: stretch;
+  justify-content: space-around;
+  align-content: space-evenly;
+  
 
   background-color: var(--background-3);
   padding: 95px 56px;
@@ -273,7 +279,7 @@ section#pages #pages-list li {
 }
 
 section#pages #pages-list img {
-  height: 433px;
+  height: 80vh;
 }
 
 section#footer-slogan {
@@ -299,4 +305,29 @@ section#footer-legal {
 
 section#footer-legal img {
   width: 100px;
+}
+
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (min-width: 1600px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  html {
+    font-size: 24px;
+  }
 }
