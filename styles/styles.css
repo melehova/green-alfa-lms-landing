@@ -141,6 +141,7 @@ ul.gradient-items-list li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 ul.gradient-items-list li span:first-of-type {
