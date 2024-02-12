@@ -276,6 +276,12 @@ section#pages #pages-list {
 
 section#pages #pages-list li {
   margin-right: 48px;
+  transition: margin 0.3s ease-in-out;
+}
+
+section#pages #pages-list li:hover,
+section#pages #pages-list li:focus {
+  margin-top: -10px;
 }
 
 section#pages #pages-list img {
