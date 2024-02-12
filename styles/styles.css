@@ -20,8 +20,7 @@
   --welcome-banner-height: 623px;
 }
 
-html,
-* {
+html {
   scroll-behavior: smooth;
   font-family: "Red Hat Display", sans-serif;
   font-size: 14px;
@@ -72,8 +71,8 @@ header {
 }
 
 h1 {
-  font-size: 5.2rem;
-  line-height: 5.2rem;
+  font-size: 4.5rem;
+  line-height: 4.5rem;
   font-weight: 900;
   color: var(--text-1);
   margin-block-start: 0.3em;
@@ -100,7 +99,7 @@ a {
 }
 
 #logo {
-  height: 24px;
+  height: 2rem;
 }
 
 #block-welcome {
@@ -110,7 +109,7 @@ a {
 
 #block-welcome section {
   flex: 0.6;
-  margin-left: 10%;
+  margin-left: 7%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -252,7 +251,7 @@ section#features-tiles section#accent-tile #icons {
 }
 
 section#accent-tile #icons img {
-  height: 30px;
+  height: 2rem;
 }
 
 section#accent-tile #definition {
@@ -328,12 +327,12 @@ section#footer-legal img {
 
 @media screen and (min-width: 1920px) {
   html {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
 @media screen and (min-width: 2560px) {
   html {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
