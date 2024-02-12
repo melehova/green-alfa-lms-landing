@@ -341,9 +341,33 @@ section#footer-legal img {
   }
 }
 
+@media screen and (min-width: 2048px) {
+  html {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 2160px) {
+  html {
+    font-size: 30px;
+  }
+}
+
 @media screen and (min-width: 2560px) {
   html {
     font-size: 36px;
+  }
+}
+
+@media screen and (min-width: 2880px) {
+  html {
+    font-size: 38px;
+  }
+}
+
+@media screen and (min-width: 3240px) {
+  html {
+    font-size: 40px;
   }
 }
 
