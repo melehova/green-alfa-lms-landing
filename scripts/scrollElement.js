@@ -31,7 +31,6 @@ export const scrollElement = (selector, options = {}) => {
       }
 
       container.style.transform = `translateX(${-progress}px)`;
-      container.style.transform += `skewX(${speed * 0.4}deg)`;
       window.requestAnimationFrame(loop);
     }
     loop();
