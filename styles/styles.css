@@ -219,7 +219,7 @@ section#features-tiles section.features-tile {
 
   background-color: var(--background-2);
 
-  padding: 3rem;
+  padding: 2rem;
 }
 
 section#features-tiles section#accent-tile {
@@ -343,19 +343,19 @@ section#footer-legal img {
 
 @media screen and (min-width: 2048px) {
   html {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 
 @media screen and (min-width: 2160px) {
   html {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 
 @media screen and (min-width: 2560px) {
   html {
-    font-size: 36px;
+    font-size: 30px;
   }
 }
 
