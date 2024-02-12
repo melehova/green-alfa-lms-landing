@@ -264,7 +264,11 @@ section#accent-tile #definition {
 
 section#pages {
   background: var(--gradient);
-  padding: 24px 48px;
+  padding: 72px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70vh;
 }
 
 section#pages #pages-list {
@@ -284,7 +288,7 @@ section#pages #pages-list li:focus {
 }
 
 section#pages #pages-list img {
-  height: 80vh;
+  height: 55vh;
 }
 
 section#footer-slogan {
