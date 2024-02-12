@@ -343,19 +343,19 @@ section#footer-legal img {
 
 @media screen and (min-width: 2560px) {
   html {
-    font-size: 28px;
+    font-size: 32px;
   }
 }
 
 @media screen and (min-width: 3840px) {
   html {
-    font-size: 32px;
+    font-size: 40px;
   }
 }
 
 @media screen and (min-width: 4096px) {
   html {
-    font-size: 42px;
+    font-size: 44px;
   }
 }
 
