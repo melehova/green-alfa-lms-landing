@@ -340,3 +340,21 @@ section#footer-legal img {
     font-size: 22px;
   }
 }
+
+@media screen and (min-width: 3840px) {
+  html {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 4096px) {
+  html {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 5120px) {
+  html {
+    font-size: 32px;
+  }
+}
