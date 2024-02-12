@@ -46,7 +46,7 @@ export const scrollElement = (selector, options = {}) => {
       });
 
       container.addEventListener('scroll', () => {
-        console.log('scroll');
+        // idea
         speed++;
       });
     }
