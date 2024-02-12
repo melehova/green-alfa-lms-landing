@@ -191,7 +191,7 @@ ul#features-list li {
 }
 
 section#features-tiles {
-  height: 80vh;
+  min-height: 80vh;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   grid-auto-rows: minmax(auto, 1fr);
