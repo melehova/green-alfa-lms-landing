@@ -32,6 +32,7 @@ body {
   box-sizing: border-box;
   height: max-content;
   overflow-y: scroll;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   background-color: var(--background-1);
