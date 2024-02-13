@@ -356,11 +356,6 @@ section#footer-legal img {
 }
 
 @media screen and (max-width: 768px) {
-
-  section#block-welcome {
-    min-height: 0;
-  }
-
   h1 {
     font-size: 3.7rem;
     line-height: 3.7rem;
@@ -374,6 +369,10 @@ section#footer-legal img {
   h3 {
     font-size: 1.2rem;
     line-height: 2rem;
+  }
+
+  section#block-welcome {
+    min-height: 0;
   }
 
   #block-welcome #banner {
@@ -409,16 +408,15 @@ section#footer-legal img {
   }
 
   section#features-tiles section.features-tile {
-    border-radius: 0;  
+    border-radius: 0;
     padding: 2rem;
     background-color: var(--background-2);
   }
 
-  
   section#features-tiles {
     background-color: var(--background-1);
   }
-  
+
   section#features-tiles section#accent-tile {
     color: var(--background-1);
   }
@@ -456,10 +454,15 @@ section#footer-legal img {
     margin: 0;
   }
 
+  section#pages #pages-list li:hover,
+  section#pages #pages-list li:focus {
+    margin: 0;
+  }
+
   section#footer-slogan {
     font-size: 1.5rem;
     line-height: 2rem;
-  }  
+  }
 }
 
 @media screen and (min-width: 1280px) {
