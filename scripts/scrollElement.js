@@ -1,10 +1,12 @@
 export const scrollElement = (selector, options = {}) => {
-  const { speed: initSpeed = 1, stopOnHover = false } = options;
-  let speed = initSpeed;
+  const initSpeed = options.speed || 1;
 
   const container = document.querySelector(`${selector} .running-line-wrapper`);
 
   const handleMarquee = () => {
+    if (!options.speed) {
+      return;
+    }
     const contentNodes = [...container.querySelectorAll('.running-line-content')];
     const content = contentNodes.at(-1);
 
@@ -25,31 +27,52 @@ export const scrollElement = (selector, options = {}) => {
     let progress = 1;
 
     const loop = () => {
-      progress += speed;
+      progress += options.speed;
+
       if (progress >= contentWidth) {
         return handleMarquee();
       }
 
       container.style.transform = `translateX(${-progress}px)`;
-      window.requestAnimationFrame(loop);
+      if (options.speed > 0) {
+        return window.requestAnimationFrame(loop);
+      }
+
+      if (options.details === 'stop') {
+        return;
+      }
+
+      if (options.details === 'reset') {
+        container.style.transform = '';
+        for (let index in contentNodes) {
+          return index && contentNodes[index].remove();
+        }
+      }
     }
     loop();
-
-    if (stopOnHover) {
-      container.addEventListener('mouseover', () => {
-        speed = 0;
-      });
-
-      container.addEventListener('mouseout', () => {
-        speed = initSpeed;
-      });
-
-      container.addEventListener('scroll', () => {
-        // idea
-        speed++;
-      });
-    }
+    return loop;
   };
 
-  handleMarquee();
+  let loop = handleMarquee();
+
+  const handleMouseOver = () => {
+    options.speed = 0;
+  };
+
+  const handleMouseOut = () => {
+    options.details = 'stop';
+    options.speed = initSpeed;
+    loop();
+  };
+
+  const handleStartLoop = () => {
+    loop = handleMarquee();
+  }
+
+  if (options.stopOnHover) {
+    container.addEventListener('mouseover', handleMouseOver);
+    container.addEventListener('mouseout', handleMouseOut);
+  }
+
+  addEventListener('startLoop', handleStartLoop)
 }
