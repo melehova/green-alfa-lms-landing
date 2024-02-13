@@ -168,8 +168,7 @@ ul.gradient-items-list li span:first-of-type {
 }
 
 ul.gradient-items-list li span:first-of-type img {
-  height: 1.5em;
-  width: 1.5em;
+  height: 1.2em;
 }
 
 ul.gradient-items-list li span:first-of-type svg {
@@ -272,8 +271,19 @@ section#features-tiles section#accent-tile #icons {
   padding: 1rem 1.5rem 1rem 0;
 }
 
-section#accent-tile #icons img {
+section#accent-tile #icons .svg-icon {
   height: 2rem;
+  width: 2rem;
+  background-color: var(--background-3);
+}
+
+.svg-icon {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
 }
 
 section#accent-tile #definition {
@@ -376,13 +386,17 @@ section#footer-legal img {
     flex: 1;
   }
 
+  section#block-welcome section#info div#text-info {
+    padding: 2rem 0;
+  }
+
   p.subtitle {
     font-size: 1.14rem;
     line-height: 1.4rem;
   }
 
   ul#features-list {
-    font-size: 1.14rem;
+    font-size: 1rem;
     line-height: 1.4rem;
   }
 
@@ -390,30 +404,38 @@ section#footer-legal img {
     min-height: 80vh;
     display: flex;
     flex-direction: column;
+    padding: 3.5rem 0;
+    margin: 0;
   }
 
+  section#features-tiles section.features-tile {
+    border-radius: 0;  
+    padding: 2rem;
+    background-color: var(--background-2);
+  }
+
+  
+  section#features-tiles {
+    background-color: var(--background-1);
+  }
+  
   section#features-tiles section#accent-tile {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-
-    background: var(--gradient);
-    color: var(--background-3);
-
-    padding-top: 0;
-    padding-bottom: 0;
+    color: var(--background-1);
   }
 
   section#features-tiles section#accent-tile #icons {
     flex: 0.15;
   }
 
-  section#accent-tile #icons img {
+  section#accent-tile #icons .svg-icon {
     height: 1.7rem;
+    width: 1.7rem;
+    background-color: var(--background-1);
   }
 
   section#accent-tile #acronym span {
     font-size: 4.5rem;
+    color: var(--background-1);
   }
 
   section#pages {
